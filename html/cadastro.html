@@ -1,0 +1,329 @@
+<style>
+.pageWrap label {
+    display: block;
+    padding: 0 1rem .2rem .5rem;
+}
+.pageWrap input, .pageWrap textarea, .pageWrap button {
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid #ccc;
+    padding: .3rem .5rem;
+    width: 100%;
+    border-radius: .3rem;
+}
+.pageWrap textarea {
+    height: 5rem;
+}
+.pageWrap button {
+    border: 0;
+}
+#msgErroBox, #msgFb {
+    display: none;
+}
+#msgErro {
+    background: #ffff00;
+    color: darkred;
+    font-size: 80%;
+    display: table;
+    margin: auto;
+    margin-top: 1rem;
+    padding: .5rem;
+    border-radius: .3rem;
+}
+#msgErro > span {
+    display: block;
+    float: right;
+    cursor: pointer;
+    border: 1px solid grey;
+    border-radius: .2rem;
+    background: #fff;
+}
+#msgErro > span:hover {
+    background: red;
+    color: #fff;
+}
+#msgErro > h3 {
+    margin: 0;
+}
+</style>
+
+<h2>
+    <a href="#home"><i class="fas fa-fw fa-arrow-left"></i></a>
+    <span>Cadastre o seu anúncio aqui.</span>    
+</h2>
+<div class="pageWrap">
+
+<div id="msgFb"></div>
+
+<form action="#servicos" method="post" id="servicos" target="_none">
+    Faça a divulgação dos seus serviços aqui! Para isso, preencha o formulário abaixo.
+<div id="msgErroBox">
+    <div id="msgErro"></div>
+</div>
+
+<p>
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" id="nome" placeholder="Seu nome completo." >
+</p>
+<p>
+    <label for="titulo">Título do Serviço</label>
+    <input type="text" name="titulo" id="titulo" placeholder="Digite o nome do serviço prestado">
+</p>
+<p>
+    <label for="tel">Telefone</label>
+    <input type="text" name="tel" id="tel" placeholder="Digite o número de telefone para contato" >
+</p>
+<p>
+    <label for="tipo">Selecione o tipo de serviço prestado</label>
+    <select name="categorias" id="categorias">
+        <option value="Doméstico">Doméstico</option>
+        <option value="Empresarial">Empresarial</option>
+    </select>
+</p>
+<p>
+    <label for="ddd">Selecione o DDD</label>
+    <select name="ddds" id="ddds">
+    <option value="11">São Paulo (11)</option>
+    <option value="12">São José dos Campos (12)</option>
+    <option value="13">Santos (13)</option>
+    <option value="14">Bauru (14)</option>
+    <option value="15">Sorocaba (15)</option>
+    <option value="16">Ribeirão Preto (16)</option>
+    <option value="17">São José do Rio Preto (17)</option>
+    <option value="18">Presidente Prudente (18)</option>
+    <option value="19">Campinas (19)</option>
+    <option value="21">Rio de Janeiro (21)</option>
+    <option value="22">Campos dos Goytacazes (22)</option>
+    <option value="24">Volta Redonda (24)</option>
+    <option value="27">Vila Velha/Vitória (27)</option>
+    <option value="28">Cachoeiro de Itapemrim (28)</option>
+    <option value="31">Belo Horizonte (31)</option>
+    <option value="32">Juíz de Fora (32)</option>
+    <option value="33">Governador Valadares (33)</option>
+    <option value="34">Uberlândia (34)</option>
+    <option value="35">Poços de Caldas (35)</option>
+    <option value="37">Divinópolis (37)</option>
+    <option value="38">Montes Claros (38)</option>
+    <option value="41">Curitiba (41)</option>
+    <option value="42">Ponta Grossa (42)</option>
+    <option value="43">Londrina (43)</option>
+    <option value="44">Maringá (44)</option>
+    <option value="45">Foz do Iguaçú (45)</option>
+    <option value="46">Francisco Beltrão/Pato Branco (46)</option>
+    <option value="47">Joinville (47)</option>
+    <option value="48">Florianópolis (48)</option>
+    <option value="49">Chapecó (49)</option>
+    <option value="51">Porto Alegre (51)</option>
+    <option value="53">Pelotas (53)</option>
+    <option value="54">Caxias do Sul (54)</option>
+    <option value="55">Santa Maria (55)</option>
+    <option value="61">Brasília (61)</option>
+    <option value="62">Goiânia (62)</option>
+    <option value="63">Caxias do Sul (62)</option>
+    <option value="64">Rio Verde (64)</option>
+    <option value="65">Cuiabá (65)</option>
+    <option value="66">Rondonópolis (66)</option>
+    <option value="67">Campo Grande (67)</option>
+    <option value="68">Rio Branco (68)</option>
+    <option value="69">Porto Velho (69)</option>
+    <option value="71">Salvador (71)</option>    
+    <option value="73">Ilhéus (73)</option>
+    <option value="74">Juazeiro (74)</option>
+    <option value="75">Feira de Santana (75)</option>
+    <option value="77">Barreiras (77)</option>
+    <option value="79">Aracaju (79)</option>
+    <option value="81">Recife (81)</option>
+    <option value="82">Maceió (82)</option>
+    <option value="83">João Pessoa (83)</option>
+    <option value="84">Natal (84)</option>
+    <option value="85">Fortaleza (85)</option>
+    <option value="86">Teresina (86)</option>
+    <option value="87">Petrolina (87)</option>
+    <option value="88">Juazeiro do Norte (88)</option>
+    <option value="89">Picos (89)</option>
+    <option value="91">Belém (91)</option>
+    <option value="92">Manaus (92)</option>
+    <option value="93">Santarém (93)</option>
+    <option value="94">Marabá (94)</option>
+    <option value="95">Boa Vista (95)</option>
+    <option value="96">Macapá (96)</option>
+    <option value="97">Coari (97)</option>
+    <option value="98">São Luís (98)</option>
+    <option value="99">Imperatriz (99)</option>
+
+    </select>
+</p>
+<p>
+<p>
+    <label for="estado">Selecione o Estado</label>
+    <select name="estados" id="estados">
+    <option value="Acre">Acre</option>
+    <option value="Alagoas">Alagoas</option>
+    <option value="Amazonas">Amazonas</option>
+    <option value="Bahia">Bahia</option>
+    <option value="Ceará">Ceará</option>
+    <option value="Distrito Federal">Distrito Federal</option>
+    <option value="Espírito Santo">Espírito Santo</option>
+    <option value="Goiás">Goiás</option>
+    <option value="Maranhão">Maranhão</option>
+    <option value="Mato Grosso">Mato Grosso</option>
+    <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+    <option value="Minas Gerais">Minas Gerais</option>
+    <option value="Pará">Pará</option>
+    <option value="Paraíba">Paraíba</option>
+    <option value="Paraná">Paraná</option>
+    <option value="Piauí">Piauí</option>
+    <option value="Rio de Janeiro">Rio de Janeiro</option>
+    <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+    <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+    <option value="Rondônia">Rondônia</option>
+    <option value="Roraima">Roraima</option>
+    <option value="Santa Catarina">Santa Catarina</option>
+    <option value="São Paulo">São Paulo</option>
+    <option value="Sergipe">Sergipe</option>
+    <option value="Tocantins">Tocantins</option>
+    </select>
+    </p>
+
+    <label for="email">E-mail de contato:</label>
+    <input type="text" name="email" id="email" placeholder="Seu e-mail principal." >
+</p>
+<p>
+    <label for="desc">Descrição do serviço:</label>
+    <input type="text" name="desc" id="desc" placeholder="Descreva o seu serviço.">
+</p> 
+<p>
+    <button class="btnDefault" type="submit" name="enviar" id="enviar">Enviar</button>
+</p>
+</form>
+
+</div>
+
+<script>
+    
+// Oculta barra superior
+$('header').slideUp('fast');
+
+// Pré-preenche nome e e-mail de usuário, se logado
+
+// Monitorando envio do formulário
+$(document).on('submit', '#servicos', processaForm);
+
+// Monitorando botão fechar box
+$(document).on('click', '#msgErro > span', closeBox);
+
+// Processamento do formulário
+function processaForm(){
+    // Variável que armazena as mensagens de erro
+    var erro = '';
+
+    // Variável que contém o feedback do erro
+    var msg = '';
+
+    // Obtendo os valores dos campos já sanitizados
+    var formNome = sanitiza($('#nome').val());
+    var formEmail = sanitiza($('#email').val());
+    var formDesc = sanitiza($('#desc').val());
+    var formTel = sanitiza($('#tel').val());
+    var formTipo = sanitiza($('#categorias').val());
+    var formTitulo = sanitiza($('#titulo').val());
+    var formEstado = sanitiza($('#estados').val());
+    var formDdd = sanitiza($('#ddds').val());
+
+    // Atualizando campos com valores sanitizados
+    $('#nome').val(formNome);
+    $('#email').val(formEmail);
+    $('#desc').val(formDesc);
+    $('#tel').val(formTel);
+    $('#categorias').val(formTipo);
+    $('#titulo').val(formTitulo);
+    $('#estados').val(formEstado);
+    $('#ddds').val(formDdd);
+
+    // Validando nome
+    if (formNome.length < 3) {
+        erro += '<li>Seu nome está muito curto.</li>';
+    } else if (!soLetras(formNome)) {
+        erro += '<li>Seu nome tem caracteres inválidos.</li>';
+    }
+
+    // Validando e-mail
+    if (formEmail.indexOf('@') < 1) {
+        erro += '<li>Seu e-mail não é válido.</li>';
+    } else if (!isMail(formEmail)) {
+        erro += '<li>Seu e-mail não é válido.</li>';
+    }
+
+    // Validando descrição
+    if (formDesc.length < 5) {
+        erro += '<li>A descrição está muito curta</li>';
+    }
+
+    // Validando telefone
+    if (formTel.length < 5) {
+        erro += '<li>O número de telefone não é valido.</li>';
+    }
+
+    // Se não ocorreram erros...
+    if (erro == '') {
+
+        // Quebra nome do remetente pelos espaços
+        nome = formNome.split(' ');
+
+        // Enviando para o Firebase, salvando na coleção 'contatos'
+        db.collection("servicos").add({
+            data: agoraDb(), // Obtém a data de agora, formatada
+            nome: formNome,
+            email: formEmail,
+            desc: formDesc,
+            telefone: formTel,
+            tipo: formTipo,
+            titulo: formTitulo,
+            estado: formEstado,
+            ddd: formDdd,
+            status: 'recebido'
+        }).then(function(docRef) { // Se gravou no Firebase
+            msg = `
+            <h3>Olá ${nome[0]}!</h3>
+            <p>Seu anúncio foi cadastrado com sucesso.</p>
+            Obrigado...
+            `;
+            $('#msgFb').html(msg);
+            $('#servicos').hide('fast', function(){
+                $('#msgFb').show('fast');
+            });        
+        }).catch(function(error) { // Se falhou ao gravar no Firebase
+            msg = `
+            <h3>Ooooops!</h3>
+            <p>Ocorreram erros ao tentar enviar o seu contato:</p>
+            <ul><li>Falha no servidor remoto.</li>
+            <p>A equipe técnica do ShiningHouse já foi avisada da falha.</p>
+            Você pode tentar enviar o formulário novamente, agora ou mais tarde.
+            `;
+            $('#msgErro').html(msg);
+            $('#msgErroBox').show('fast');
+        });
+
+    } else {
+        // Exibe os erros na página
+        msg = `
+        <span><i class="fas fa-fw fa-times"></i></span>
+        <h3>Ooops!</h3>
+        <p>Ocorreram erros ao tentar enviar o seu contato:</p>
+        <ul>${erro}</ul>
+        Por favor, corrija os erros e tente novamente.
+        `;
+
+        $('#msgErro').html(msg);
+        $('#msgErroBox').show('fast');
+    }
+    
+
+    return false;
+}
+
+// Fecha caixa de mensagem de erro
+function closeBox(){
+    $('#msgErroBox').hide('fast');
+}
+</script>
